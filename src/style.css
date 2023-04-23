@@ -94,7 +94,7 @@ img{
   /* width: auto; */
 }
 
-.horizontalSplitter {
+.imageTile{
   max-height:100%;
   width: auto;
 }
@@ -102,8 +102,17 @@ img{
 .horizontalSplitter{
   height: 100%;
   display: grid;
-  grid-auto-rows: 1fr;
+  grid-template-rows: 1fr 1fr;
   /* grid-template-rows: 1fr 1fr; */
   grid-template-columns: 1fr;
+  gap: 30px;
+}
+
+.verticalSplitter{
+  height: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  /* grid-template-rows: 1fr 1fr; */
+  grid-template-rows: 1fr;
   gap: 30px;
 }

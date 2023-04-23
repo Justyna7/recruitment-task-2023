@@ -1,14 +1,12 @@
 import * as React from 'react';
 import './style.css';
-import TextTile from './TextTileComponent.tsx';
-import  ImageTile  from './ImageTileComponent.tsx';
-import HorizontalSplitterTile from './HorizontalSplitterComponent.tsx';
 import HorizontalSplitterTileComponent from './HorizontalSplitterComponent.tsx';
+import VerticalSplitterTileComponent from './VerticalSplitterComponent.tsx';
 
 export default function App() {
   // load definition here
   const horTile = {
-    "type": "horizontalSplitter",
+    "type": "verticalSplitter",
     "elementKey": "55fa75b4-d48a-11ed-afa1-0242ac120002",
     "elements": [{
         "type": "imageTile",
@@ -31,7 +29,7 @@ export default function App() {
       {/* TODO remove title usage from template */}
       <h1>{'Place you components here 👇'}</h1>
       <div className="content">
-        <HorizontalSplitterTileComponent tile={horTile}/>
+        <VerticalSplitterTileComponent tile={horTile}/>
       </div>
     </div>
   );
