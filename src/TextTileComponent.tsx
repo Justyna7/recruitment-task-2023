@@ -8,7 +8,7 @@ export default function TextTileComponent(tile: TextTile) {
   return (
     <div className={"textTile "+tile.tile.color} key={tile.tile.elementKey}>
       <h1>{tile.tile.title}</h1>
-      <div className="content">{tile.tile.text}</div>
+      <div className="text">{tile.tile.text}</div>
     </div>
   );
 }
