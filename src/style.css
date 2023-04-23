@@ -1,3 +1,10 @@
+:root {
+  --dark:#1b1c2e;
+  --mid:#242538;
+  --light:#b6b6cc;
+}
+
+
 body {
   background-color: #242538;
   font-family: Helvetica;
@@ -32,6 +39,48 @@ body {
   background-color: #b6b6cc;
   width: min(90vw, 80vh);
   height: min(90vw, 80vh);
+  padding: 10px;
+}
+
+.textTile{
+  /* position: relative; */
+  background-color: #242538;
+  border-radius: 20px;
+  height: 100%
+}
+.content .textTile .content{
+  position: relative;
+  /* position: absolute;      */
+  display:block;
+  width: fit-content;
+  border-radius: 20px;
+  height: inherit;
+  /* height: max-content; */
+}
+.textTile h1 {
+  /* width: fit-content; */
+  border-radius: 20px;
+  /* height: max-content; */
+}
+
+.dark .content{
+  background-color: #242538;
+}
+.mid .content{
+  background-color: #242538;
+}
+.light .content{
+  background-color: #b6b6cc;
+}
+
+.dark h1{
+  background-color: #242538;
+}
+.mid h1 {
+  background-color: #242538;
+}
+.light h1{
+  background-color: #b6b6cc;
 }
 
 /* place your styles below */
