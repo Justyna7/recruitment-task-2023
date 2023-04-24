@@ -9,7 +9,7 @@ import VerticalSplitterTileComponent from './VerticalSplitterComponent.tsx';
 
 export default function CreateTile(tile: Element) {
   // load definition here
-console.log(tile, tile.tile.type, tile.tile)
+// console.log(tile, tile.tile.type, tile.tile)
   let components = {
     imageTile: ImageTileComponent,
     textTile:TextTileComponent,
@@ -18,7 +18,7 @@ console.log(tile, tile.tile.type, tile.tile)
     verticalSplitter:VerticalSplitterTileComponent
 
   }
-  console.log(tile)
+  // console.log(tile)
   return (
     React.createElement(components[tile.tile.type], tile=tile)
   );
