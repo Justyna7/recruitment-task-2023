@@ -6,8 +6,11 @@ import CreateTile from './CreateTile.tsx';
 export default function HorizontalSplitterTileComponent(tile: HorizontalSplitter) {
   return (
     <div className={tile.tile.type} key={tile.tile.elementKey} id={tile.tile.elementKey}>
-        <CreateTile tile={tile.tile.elements[0]}></CreateTile>
-        <CreateTile tile={tile.tile.elements[1]}></CreateTile>
+       {tile.tile.elements.map(t => {
+           return(<CreateTile tile={t}></CreateTile>) 
+        })}
+        
+        {/* <CreateTile tile={tile.tile.elements[1]}></CreateTile> */}
     </div>
   );
 }

@@ -6,8 +6,8 @@ export default function ImageTileComponent(tile: ImageTile) {
   // load definition here
   console.log(tile)
   return (
-    <div className={tile.tile.type} key={tile.tile.elementKey}>
-        <img src={tile.tile.source} alt={tile.tile.title}/> 
-    </div>
+    // <div className={tile.tile.type} key={tile.tile.elementKey}>
+        <img className={tile.tile.type} key={tile.tile.elementKey} src={tile.tile.source} alt={tile.tile.title}/> 
+    // </div>
   );
 }
