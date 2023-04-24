@@ -9,16 +9,16 @@ import VerticalSplitterTileComponent from './VerticalSplitterComponent.tsx';
 
 export default function CreateTile(tile: Element) {
   // load definition here
-// console.log(tile, tile.tile.type, tile.tile)
-  let components = {
-    imageTile: ImageTileComponent,
-    textTile:TextTileComponent,
-    buttonTile:ButtonTileComponent,
-    horizontalSplitter:HorizontalSplitterTileComponent,
-    verticalSplitter:VerticalSplitterTileComponent
 
+  //map of tile types found in example.json to React elements
+  let components = { 
+    imageTile: ImageTileComponent,
+    textTile: TextTileComponent,
+    buttonTile: ButtonTileComponent,
+    horizontalSplitter: HorizontalSplitterTileComponent,
+    verticalSplitter: VerticalSplitterTileComponent
   }
-  // console.log(tile)
+
   return (
     React.createElement(components[tile.tile.type], tile=tile)
   );
