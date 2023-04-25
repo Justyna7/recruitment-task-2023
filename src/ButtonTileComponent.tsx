@@ -4,15 +4,18 @@ import {ButtonTile, Action} from './model'
 
 export default function ButtonTileComponent(tile: ButtonTile) {
   // load definition here
-
+  const actions = {
+    color: changeColor,
+    source: changeImage
+  }
+  
   function update(action: Action) {
     let element = document.getElementById(action.referenceElementKey)
-    if (!!action.value.color){
-      changeColor(action, element)
-    }
-    if(!!action.value.source){
-      changeImage(action, element)
-    }
+    // check for keys of action.value and iterate over them.
+    // For each key get the corresponding function from the "actions" dictionary 
+    // and invoke it
+    Object.keys(action.value).forEach(e => {actions[e](action, element)
+    });
   }
   function changeColor(action:Action, element:Element){
    
